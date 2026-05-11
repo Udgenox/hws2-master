@@ -1,15 +1,73 @@
 .radio {
+    /* скрываем стандартный input */
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
 }
 
 .radio::before {
+    /* создаем кастомный радио-индикатор */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #D9D9D9;
+    border-radius: 50%;
+    background-color: white;
+    transition: all 0.3s ease;
 }
 
-
 .radio:checked::before {
+    border-color: #0066CC;
+    background-color: #0066CC;
+    box-shadow: inset 0 0 0 4px white; /* создаем белую точку внутри */
+}
+
+.radio:checked::after {
+    /* альтернативный вариант с псевдоэлементом для точки */
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: white;
 }
 
 .label {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 30px; /* отступ для кастомного радио */
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    user-select: none;
+    min-height: 24px;
+    transition: color 0.3s ease;
+}
+
+.label:hover {
+    color: #0066CC;
+}
+
+.label:hover .radio::before {
+    border-color: #0066CC;
 }
 
 .options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 8px 0;
+}
+
+/* Стили для span с текстом опции */
+.span {
+    margin-left: 8px;
+    line-height: 1.5;
 }

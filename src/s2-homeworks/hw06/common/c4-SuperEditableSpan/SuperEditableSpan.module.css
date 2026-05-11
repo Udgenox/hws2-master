@@ -1,11 +1,62 @@
 .spanBlock {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    border: 1px dashed transparent;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.spanBlock:hover {
+    border-color: #D9D9D9;
+    background-color: #f5f5f5;
 }
 
 .span {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+    min-height: 20px;
+    min-width: 100px;
+}
+
+.span:empty::before {
+    content: 'enter text...';
+    color: #CCCCCC;
 }
 
 .input {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+    padding: 8px 12px;
+    border: 1px solid #D9D9D9;
+    border-radius: 4px;
+    outline: none;
+    min-width: 200px;
+    transition: border-color 0.3s ease;
+}
+
+.input:focus {
+    border-color: #0066CC;
+    box-shadow: 0 0 0 2px rgba(0, 102, 204, 0.2);
 }
 
 .pen {
+    width: 16px;
+    height: 16px;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.spanBlock:hover .pen {
+    opacity: 0.8;
 }

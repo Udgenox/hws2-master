@@ -1,3 +1,25 @@
+/* Loader.module.css */
 .loader {
-    /*свг и/или анимация*/
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, #7b68ee 0deg, rgba(123, 104, 238, 0.4) 180deg, transparent 360deg);
+    display: inline-block;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loadingContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
 }

@@ -1,0 +1,8 @@
+/* HW10.module.css */
+.container {
+    padding: 15px; /* Внутренний отступ со всех сторон */
+    display: flex;
+    justify-content: center; /* Центрирование по горизонтали (опционально) */
+    align-items: flex-start;     /* Центрирование по вертикали (опционально) */
+    min-height: 200px;       /* Чтобы блок не схлопывался */
+}
